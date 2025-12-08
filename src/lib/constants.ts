@@ -143,7 +143,7 @@ export const TESTIMONIALS = {
   headline: "WHAT OUR CLIENTS ARE SAYING",
   stats: [
     { value: "100+", label: "Properties" },
-    { value: "5,000+", label: "Acres Managed" },
+    { value: "1,500+", label: "Acres Managed" },
     { value: "98%", label: "Client Retention" },
   ],
   quotes: [

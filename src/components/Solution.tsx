@@ -118,26 +118,6 @@ export function Solution() {
           })}
         </div>
 
-        {/* Dashboard Preview Image */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mt-16"
-        >
-          <div className="relative max-w-5xl mx-auto rounded-2xl overflow-hidden">
-            {/* Glow effect */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-terra-green/30 to-terra-green-glow/30 rounded-2xl blur-xl" />
-            <div className="relative rounded-2xl overflow-hidden border border-terra-green/20">
-              <img 
-                src="/images/dashboard-preview.jpg" 
-                alt="TerraSYNC™ Environmental Dashboard - Real-time sustainability reporting" 
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
