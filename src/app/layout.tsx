@@ -185,10 +185,10 @@ const organizationSchema = {
   email: "info@terrasync.biz",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "9111 Cross Park Drive",
+    streetAddress: "121 East Jackson Ave",
     addressLocality: "Knoxville",
     addressRegion: "TN",
-    postalCode: "37923",
+    postalCode: "37919",
     addressCountry: "US"
   },
   contactPoint: [
@@ -357,10 +357,10 @@ const localBusinessSchema = {
   description: "Commercial autonomous mowing and grounds management services for universities, municipalities, corporate campuses, and commercial properties.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "9111 Cross Park Drive",
+    streetAddress: "121 East Jackson Ave",
     addressLocality: "Knoxville",
     addressRegion: "TN",
-    postalCode: "37923",
+    postalCode: "37919",
     addressCountry: "US"
   },
   areaServed: [
