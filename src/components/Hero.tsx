@@ -33,10 +33,36 @@ export function Hero() {
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-terra-green/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '-3s' }} />
       </div>
 
-      {/* Logo Header */}
-      <div className="absolute top-0 left-0 w-full z-20 px-6 py-8 sm:px-10">
-        <img src="/images/terrasync-logo.svg" alt="TerraSYNC™" className="h-10 sm:h-12 w-auto brightness-0" />
-      </div>
+      {/* Header with Logo and Navigation */}
+      <header className="absolute top-0 left-0 w-full z-20 px-6 py-6 sm:px-10">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          {/* Logo - Links to main website */}
+          <a href="https://terrasync.biz" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+            <img src="/images/terrasync-logo.svg" alt="TerraSYNC™" className="h-10 sm:h-12 w-auto brightness-0" />
+          </a>
+          
+          {/* Navigation Buttons */}
+          <nav className="flex items-center gap-3 sm:gap-4">
+            <a 
+              href="https://terrasync.biz/products" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white/80 hover:text-white border border-white/20 hover:border-white/40 rounded-full transition-all duration-300"
+            >
+              See Our Products
+            </a>
+            <a 
+              href="https://terrasync.biz/book/d7a03057" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-terra-green text-terra-black hover:bg-terra-green-dark rounded-full transition-all duration-300"
+            >
+              <span className="hidden sm:inline">Schedule Appointment</span>
+              <span className="sm:hidden">Book Now</span>
+            </a>
+          </nav>
+        </div>
+      </header>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
