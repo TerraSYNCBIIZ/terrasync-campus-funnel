@@ -185,6 +185,10 @@ const organizationSchema = {
   email: "info@terrasync.biz",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "9111 Cross Park Drive",
+    addressLocality: "Knoxville",
+    addressRegion: "TN",
+    postalCode: "37923",
     addressCountry: "US"
   },
   contactPoint: [
@@ -351,6 +355,14 @@ const localBusinessSchema = {
   email: "info@terrasync.biz",
   priceRange: "$$$$",
   description: "Commercial autonomous mowing and grounds management services for universities, municipalities, corporate campuses, and commercial properties.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "9111 Cross Park Drive",
+    addressLocality: "Knoxville",
+    addressRegion: "TN",
+    postalCode: "37923",
+    addressCountry: "US"
+  },
   areaServed: [
     {
       "@type": "State",
@@ -393,6 +405,7 @@ const productSchema = {
   "@type": "Product",
   name: "TerraSYNC SYNC Plan",
   description: "Zero capital expenditure autonomous grounds management subscription. Includes commercial robotic mowers, installation, monitoring, maintenance, and sustainability reporting.",
+  image: `${siteUrl}/images/dashboard-preview.jpg`,
   brand: {
     "@type": "Brand",
     name: "TerraSYNC™"
@@ -400,12 +413,16 @@ const productSchema = {
   category: "Commercial Landscaping Equipment & Services",
   offers: {
     "@type": "Offer",
+    price: "0",
     priceCurrency: "USD",
+    priceValidUntil: "2025-12-31",
     availability: "https://schema.org/InStock",
+    url: siteUrl,
     seller: {
       "@type": "Organization",
       name: "TerraSYNC™"
-    }
+    },
+    description: "Contact for custom pricing - Zero upfront capital required"
   },
   aggregateRating: {
     "@type": "AggregateRating",
