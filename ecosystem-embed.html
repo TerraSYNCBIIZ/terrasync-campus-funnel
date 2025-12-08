@@ -1,0 +1,799 @@
+<!-- TerraSYNC Ecosystem Section - Embeddable Version -->
+<!-- Instructions: In Odoo Website Builder, add an "HTML Block" and paste this entire code -->
+
+<style>
+/* TerraSYNC Ecosystem Styles */
+.ts-ecosystem {
+  --terra-green: #c5ff00;
+  --terra-green-dark: #9fcc00;
+  --terra-black: #0a0a0a;
+  --terra-black-card: #1a1a1a;
+  
+  background: var(--terra-black);
+  padding: 4rem 1rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .ts-ecosystem { padding: 6rem 1.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .ts-ecosystem { padding: 8rem 2rem; }
+}
+
+.ts-ecosystem * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.ts-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Header */
+.ts-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.ts-headline {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .ts-headline { font-size: 2.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .ts-headline { font-size: 3.5rem; }
+}
+
+.ts-headline-accent {
+  color: var(--terra-green);
+}
+
+.ts-subheadline {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .ts-subheadline { font-size: 1.125rem; }
+}
+
+/* Desktop Grid */
+.ts-grid-desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .ts-grid-desktop {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 1.25rem;
+  }
+}
+
+/* Dashboard Card */
+.ts-dashboard-card {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  min-height: 480px;
+  cursor: pointer;
+}
+
+.ts-dashboard-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  transition: transform 0.7s ease;
+}
+
+.ts-dashboard-card:hover img {
+  transform: scale(1.05);
+}
+
+.ts-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.1));
+}
+
+.ts-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.ts-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--terra-green);
+  background: rgba(197,255,0,0.1);
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.ts-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+@media (min-width: 1024px) {
+  .ts-card-title { font-size: 2rem; }
+}
+
+.ts-card-tagline {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
+  font-weight: 300;
+}
+
+.ts-card-description {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 0.75rem;
+  max-width: 24rem;
+}
+
+/* Mower Lineup Container */
+.ts-mower-container {
+  border: 2px solid rgba(197,255,0,0.3);
+  border-radius: 1.5rem;
+  background: rgba(26,26,26,0.4);
+  padding: 1.25rem;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ts-mower-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.ts-pulse-dot {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background: var(--terra-green);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.ts-mower-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--terra-green);
+}
+
+.ts-mower-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  flex: 1;
+}
+
+.ts-mower-card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.ts-mower-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.ts-mower-card:hover img {
+  transform: scale(1.1);
+}
+
+.ts-mower-card:hover .ts-mower-ring {
+  opacity: 1;
+}
+
+.ts-mower-ring {
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(197,255,0,0.6);
+  border-radius: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.ts-mower-card .ts-card-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.3) 60%, transparent);
+}
+
+.ts-mower-card .ts-card-content {
+  padding: 1rem;
+}
+
+.ts-mower-card .ts-card-title {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 1024px) {
+  .ts-mower-card .ts-card-title { font-size: 1rem; }
+}
+
+.ts-mower-card .ts-card-tagline {
+  font-size: 0.6875rem;
+  color: rgba(255,255,255,0.6);
+  margin-top: 0.25rem;
+}
+
+/* Supporting Tech Row */
+.ts-support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.ts-support-card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  min-height: 220px;
+  cursor: pointer;
+}
+
+.ts-support-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.ts-support-card:hover img {
+  transform: scale(1.1);
+}
+
+.ts-support-card .ts-card-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.2));
+}
+
+.ts-support-card .ts-card-content {
+  padding: 1.25rem;
+}
+
+.ts-category {
+  font-size: 0.5625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(197,255,0,0.8);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.ts-support-card .ts-card-title {
+  font-size: 1rem;
+}
+
+.ts-support-card .ts-card-tagline {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 0.25rem;
+}
+
+/* Mobile Layout */
+.ts-grid-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .ts-grid-mobile { display: none; }
+}
+
+.ts-mobile-dashboard {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  aspect-ratio: 16/10;
+}
+
+.ts-mobile-dashboard img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ts-mobile-mower-container {
+  border: 2px solid rgba(197,255,0,0.3);
+  border-radius: 1rem;
+  background: rgba(26,26,26,0.4);
+  padding: 1rem;
+}
+
+.ts-mobile-mower-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ts-mobile-mower-card {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.ts-mobile-mower-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ts-mobile-mower-card .ts-card-overlay {
+  background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4) 50%, transparent);
+}
+
+.ts-mobile-mower-card .ts-card-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.ts-mobile-mower-card .ts-card-title {
+  font-size: 1.125rem;
+}
+
+.ts-mobile-mower-card .ts-card-tagline {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.7);
+  margin-top: 0.25rem;
+}
+
+.ts-mobile-support-card {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.ts-mobile-support-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ts-mobile-support-card .ts-card-overlay {
+  background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.5) 50%, transparent);
+}
+
+.ts-mobile-support-card .ts-card-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+/* Honorable Mentions */
+.ts-mentions {
+  margin-top: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 1rem;
+  background: rgba(26,26,26,0.3);
+  padding: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .ts-mentions { margin-top: 2rem; padding: 2rem; }
+}
+
+.ts-mentions-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .ts-mentions-header { margin-bottom: 1.5rem; }
+}
+
+.ts-mentions-dot {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+}
+
+.ts-mentions-title {
+  font-size: 0.625rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.4);
+}
+
+@media (min-width: 768px) {
+  .ts-mentions-title { font-size: 0.75rem; }
+}
+
+.ts-mentions-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .ts-mentions-list { gap: 1rem; }
+}
+
+.ts-mention-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .ts-mention-item { gap: 0.75rem; padding: 0.75rem 1.25rem; }
+}
+
+.ts-mention-item:hover {
+  border-color: rgba(197,255,0,0.2);
+  background: rgba(197,255,0,0.03);
+}
+
+.ts-mention-item:hover .ts-mention-icon {
+  color: rgba(197,255,0,0.6);
+}
+
+.ts-mention-item:hover .ts-mention-name {
+  color: rgba(255,255,255,0.7);
+}
+
+.ts-mention-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: rgba(255,255,255,0.3);
+  transition: color 0.3s ease;
+}
+
+.ts-mention-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.5);
+  transition: color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .ts-mention-name { font-size: 0.875rem; }
+}
+
+/* Footer Text */
+.ts-footer-text {
+  text-align: center;
+  color: rgba(255,255,255,0.3);
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .ts-footer-text { margin-top: 3rem; font-size: 0.875rem; }
+}
+
+/* Animation */
+.ts-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.ts-animate.ts-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ts-delay-1 { transition-delay: 0.1s; }
+.ts-delay-2 { transition-delay: 0.2s; }
+.ts-delay-3 { transition-delay: 0.3s; }
+.ts-delay-4 { transition-delay: 0.4s; }
+.ts-delay-5 { transition-delay: 0.5s; }
+</style>
+
+<section class="ts-ecosystem" id="ecosystem">
+  <div class="ts-container">
+    <!-- Header -->
+    <div class="ts-header ts-animate">
+      <h2 class="ts-headline">
+        THE <span class="ts-headline-accent">TERRASYNC™</span> ECOSYSTEM
+      </h2>
+      <p class="ts-subheadline">Previously siloed technologies. One intelligent platform.</p>
+    </div>
+
+    <!-- Desktop Grid -->
+    <div class="ts-grid-desktop">
+      <!-- Dashboard Card -->
+      <div class="ts-dashboard-card ts-animate ts-delay-1">
+        <img src="https://funnelcommercial.netlify.app/images/ecosystem/dashboard.jpg" alt="TerraSYNC Dashboard" loading="lazy">
+        <div class="ts-card-overlay"></div>
+        <div class="ts-card-content">
+          <span class="ts-tag">Platform</span>
+          <h3 class="ts-card-title">TerraSYNC Dashboard</h3>
+          <p class="ts-card-tagline">One Platform. Total Control.</p>
+          <p class="ts-card-description">Unified command center for your entire grounds operation</p>
+        </div>
+      </div>
+
+      <!-- Mower Lineup -->
+      <div class="ts-mower-container ts-animate ts-delay-2">
+        <div class="ts-mower-header">
+          <div class="ts-pulse-dot"></div>
+          <h4 class="ts-mower-title">Our Mower Lineup</h4>
+        </div>
+        <div class="ts-mower-grid">
+          <div class="ts-mower-card">
+            <img src="https://funnelcommercial.netlify.app/images/ecosystem/nexmow.jpg" alt="Nexmow" loading="lazy">
+            <div class="ts-card-overlay"></div>
+            <div class="ts-mower-ring"></div>
+            <div class="ts-card-content">
+              <h5 class="ts-card-title">Nexmow</h5>
+              <p class="ts-card-tagline">Campus-Scale Fleet Autonomy</p>
+            </div>
+          </div>
+          <div class="ts-mower-card">
+            <img src="https://funnelcommercial.netlify.app/images/ecosystem/ceora.jpg" alt="Husqvarna CEORA" loading="lazy">
+            <div class="ts-card-overlay"></div>
+            <div class="ts-mower-ring"></div>
+            <div class="ts-card-content">
+              <h5 class="ts-card-title">Husqvarna CEORA</h5>
+              <p class="ts-card-tagline">All-Weather Performance</p>
+            </div>
+          </div>
+          <div class="ts-mower-card">
+            <img src="https://funnelcommercial.netlify.app/images/ecosystem/kress.jpg" alt="Kress" loading="lazy">
+            <div class="ts-card-overlay"></div>
+            <div class="ts-mower-ring"></div>
+            <div class="ts-card-content">
+              <h5 class="ts-card-title">Kress</h5>
+              <p class="ts-card-tagline">Precision Terrain Handling</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supporting Tech - Full Width Row -->
+      <div class="ts-support-grid" style="grid-column: 1 / -1;">
+        <div class="ts-support-card ts-animate ts-delay-3">
+          <img src="https://funnelcommercial.netlify.app/images/ecosystem/line-painter.jpg" alt="TinyMobileRobots" loading="lazy">
+          <div class="ts-card-overlay"></div>
+          <div class="ts-card-content">
+            <span class="ts-category">Field Marking</span>
+            <h5 class="ts-card-title">TinyMobileRobots</h5>
+            <p class="ts-card-tagline">Robotic Line Painting</p>
+          </div>
+        </div>
+        <div class="ts-support-card ts-animate ts-delay-4">
+          <img src="https://funnelcommercial.netlify.app/images/ecosystem/soil-sensor.jpg" alt="Soil Sensors" loading="lazy">
+          <div class="ts-card-overlay"></div>
+          <div class="ts-card-content">
+            <span class="ts-category">Monitoring</span>
+            <h5 class="ts-card-title">Soil Sensors</h5>
+            <p class="ts-card-tagline">Real-Time Ground Intelligence</p>
+          </div>
+        </div>
+        <div class="ts-support-card ts-animate ts-delay-5">
+          <img src="https://funnelcommercial.netlify.app/images/ecosystem/irrigation.jpg" alt="Smart Irrigation" loading="lazy">
+          <div class="ts-card-overlay"></div>
+          <div class="ts-card-content">
+            <span class="ts-category">Water Mgmt</span>
+            <h5 class="ts-card-title">Smart Irrigation</h5>
+            <p class="ts-card-tagline">Intelligent Water Management</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Layout -->
+    <div class="ts-grid-mobile">
+      <!-- Dashboard -->
+      <div class="ts-mobile-dashboard ts-animate ts-delay-1">
+        <img src="https://funnelcommercial.netlify.app/images/ecosystem/dashboard.jpg" alt="TerraSYNC Dashboard" loading="lazy">
+        <div class="ts-card-overlay"></div>
+        <div class="ts-card-content">
+          <span class="ts-tag">Platform</span>
+          <h3 class="ts-card-title">TerraSYNC Dashboard</h3>
+          <p class="ts-card-tagline">One Platform. Total Control.</p>
+        </div>
+      </div>
+
+      <!-- Mower Lineup -->
+      <div class="ts-mobile-mower-container ts-animate ts-delay-2">
+        <div class="ts-mower-header">
+          <div class="ts-pulse-dot"></div>
+          <h4 class="ts-mower-title">Our Mower Lineup</h4>
+        </div>
+        <div class="ts-mobile-mower-stack">
+          <div class="ts-mobile-mower-card">
+            <img src="https://funnelcommercial.netlify.app/images/ecosystem/nexmow.jpg" alt="Nexmow" loading="lazy">
+            <div class="ts-card-overlay"></div>
+            <div class="ts-card-content">
+              <h5 class="ts-card-title">Nexmow</h5>
+              <p class="ts-card-tagline">Campus-Scale Fleet Autonomy</p>
+            </div>
+          </div>
+          <div class="ts-mobile-mower-card">
+            <img src="https://funnelcommercial.netlify.app/images/ecosystem/ceora.jpg" alt="Husqvarna CEORA" loading="lazy">
+            <div class="ts-card-overlay"></div>
+            <div class="ts-card-content">
+              <h5 class="ts-card-title">Husqvarna CEORA</h5>
+              <p class="ts-card-tagline">All-Weather Performance</p>
+            </div>
+          </div>
+          <div class="ts-mobile-mower-card">
+            <img src="https://funnelcommercial.netlify.app/images/ecosystem/kress.jpg" alt="Kress" loading="lazy">
+            <div class="ts-card-overlay"></div>
+            <div class="ts-card-content">
+              <h5 class="ts-card-title">Kress</h5>
+              <p class="ts-card-tagline">Precision Terrain Handling</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supporting Tech -->
+      <div class="ts-mobile-support-card ts-animate ts-delay-3">
+        <img src="https://funnelcommercial.netlify.app/images/ecosystem/line-painter.jpg" alt="TinyMobileRobots" loading="lazy">
+        <div class="ts-card-overlay"></div>
+        <div class="ts-card-content">
+          <span class="ts-category">Field Marking</span>
+          <h5 class="ts-card-title">TinyMobileRobots</h5>
+          <p class="ts-card-tagline">Robotic Line Painting</p>
+        </div>
+      </div>
+      <div class="ts-mobile-support-card ts-animate ts-delay-4">
+        <img src="https://funnelcommercial.netlify.app/images/ecosystem/soil-sensor.jpg" alt="Soil Sensors" loading="lazy">
+        <div class="ts-card-overlay"></div>
+        <div class="ts-card-content">
+          <span class="ts-category">Monitoring</span>
+          <h5 class="ts-card-title">Soil Sensors</h5>
+          <p class="ts-card-tagline">Real-Time Ground Intelligence</p>
+        </div>
+      </div>
+      <div class="ts-mobile-support-card ts-animate ts-delay-5">
+        <img src="https://funnelcommercial.netlify.app/images/ecosystem/irrigation.jpg" alt="Smart Irrigation" loading="lazy">
+        <div class="ts-card-overlay"></div>
+        <div class="ts-card-content">
+          <span class="ts-category">Water Mgmt</span>
+          <h5 class="ts-card-title">Smart Irrigation</h5>
+          <p class="ts-card-tagline">Intelligent Water Management</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Honorable Mentions -->
+    <div class="ts-mentions ts-animate ts-delay-5">
+      <div class="ts-mentions-header">
+        <div class="ts-mentions-dot"></div>
+        <span class="ts-mentions-title">Also Integrated</span>
+      </div>
+      <div class="ts-mentions-list">
+        <div class="ts-mention-item">
+          <svg class="ts-mention-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+          </svg>
+          <span class="ts-mention-name">Drone Surveillance</span>
+        </div>
+        <div class="ts-mention-item">
+          <svg class="ts-mention-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+          </svg>
+          <span class="ts-mention-name">Equipment Maintenance</span>
+        </div>
+        <div class="ts-mention-item">
+          <svg class="ts-mention-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+          </svg>
+          <span class="ts-mention-name">Operations Monitoring</span>
+        </div>
+        <div class="ts-mention-item">
+          <svg class="ts-mention-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+          </svg>
+          <span class="ts-mention-name">Employee Scheduling</span>
+        </div>
+        <div class="ts-mention-item">
+          <svg class="ts-mention-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+          </svg>
+          <span class="ts-mention-name">Resource Management</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Text -->
+    <p class="ts-footer-text ts-animate ts-delay-5">
+      All technologies seamlessly integrated through TerraSYNC's unified command center.
+    </p>
+  </div>
+</section>
+
+<script>
+// Intersection Observer for scroll animations
+document.addEventListener('DOMContentLoaded', function() {
+  const animatedElements = document.querySelectorAll('.ts-animate');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('ts-visible');
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  animatedElements.forEach(el => observer.observe(el));
+});
+</script>
+
