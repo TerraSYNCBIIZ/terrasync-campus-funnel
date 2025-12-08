@@ -7,8 +7,8 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-// Base URL for the site - update this when you get a custom domain
-const siteUrl = "https://terrasync-campus.netlify.app";
+// Base URL for the site - primary canonical domain
+const siteUrl = "https://commercial.terrasync.biz";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

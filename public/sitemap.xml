@@ -4,53 +4,53 @@
   
   <!-- Main Landing Page -->
   <url>
-    <loc>https://terrasync-campus.netlify.app/</loc>
+    <loc>https://commercial.terrasync.biz/</loc>
     <lastmod>2024-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     
     <!-- Hero Image -->
     <image:image>
-      <image:loc>https://terrasync-campus.netlify.app/images/hero-campus.jpg</image:loc>
+      <image:loc>https://commercial.terrasync.biz/images/hero-campus.jpg</image:loc>
       <image:title>Autonomous Campus Grounds Management - TerraSYNC</image:title>
       <image:caption>University campus with autonomous robotic mowers providing silent, zero-emission grounds maintenance</image:caption>
     </image:image>
     
     <!-- Dashboard Preview -->
     <image:image>
-      <image:loc>https://terrasync-campus.netlify.app/images/dashboard-preview.jpg</image:loc>
+      <image:loc>https://commercial.terrasync.biz/images/dashboard-preview.jpg</image:loc>
       <image:title>TerraSYNC Grounds Management Dashboard</image:title>
       <image:caption>Real-time monitoring dashboard for autonomous mowing fleet management and sustainability reporting</image:caption>
     </image:image>
     
     <!-- Before/After Comparison -->
     <image:image>
-      <image:loc>https://terrasync-campus.netlify.app/images/before-after-comparison.jpg</image:loc>
+      <image:loc>https://commercial.terrasync.biz/images/before-after-comparison.jpg</image:loc>
       <image:title>Traditional vs Autonomous Grounds Management Comparison</image:title>
       <image:caption>Side-by-side comparison of traditional gas-powered mowing versus TerraSYNC autonomous electric mowing</image:caption>
     </image:image>
     
     <!-- Ecosystem Images -->
     <image:image>
-      <image:loc>https://terrasync-campus.netlify.app/images/ecosystem/dashboard.jpg</image:loc>
+      <image:loc>https://commercial.terrasync.biz/images/ecosystem/dashboard.jpg</image:loc>
       <image:title>TerraSYNC Unified Command Center Dashboard</image:title>
       <image:caption>Centralized grounds management platform for campus and municipal facilities</image:caption>
     </image:image>
     
     <image:image>
-      <image:loc>https://terrasync-campus.netlify.app/images/ecosystem/nexmow.jpg</image:loc>
+      <image:loc>https://commercial.terrasync.biz/images/ecosystem/nexmow.jpg</image:loc>
       <image:title>Nexmow Commercial Autonomous Mower</image:title>
       <image:caption>Campus-scale fleet autonomy robotic mower for large commercial properties</image:caption>
     </image:image>
     
     <image:image>
-      <image:loc>https://terrasync-campus.netlify.app/images/ecosystem/ceora.jpg</image:loc>
+      <image:loc>https://commercial.terrasync.biz/images/ecosystem/ceora.jpg</image:loc>
       <image:title>Husqvarna CEORA Commercial Robotic Mower</image:title>
       <image:caption>All-weather commercial autonomous mower for university and municipal grounds</image:caption>
     </image:image>
     
     <image:image>
-      <image:loc>https://terrasync-campus.netlify.app/images/ecosystem/kress.jpg</image:loc>
+      <image:loc>https://commercial.terrasync.biz/images/ecosystem/kress.jpg</image:loc>
       <image:title>Kress Commercial Robotic Mower</image:title>
       <image:caption>Precision terrain handling autonomous mower for corporate and campus landscapes</image:caption>
     </image:image>

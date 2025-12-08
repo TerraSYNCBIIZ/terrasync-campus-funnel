@@ -6,7 +6,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://terrasync-campus.netlify.app/sitemap.xml
+Sitemap: https://commercial.terrasync.biz/sitemap.xml
 
 # Crawl-delay for polite crawling (optional, respected by some bots)
 Crawl-delay: 1
