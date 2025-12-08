@@ -1,0 +1,18 @@
+{
+  "name": "TerraSYNC™ Campus - Autonomous Grounds Management",
+  "short_name": "TerraSYNC Campus",
+  "description": "Leading universities and municipalities are cutting grounds costs by 40% with autonomous mowing. Zero emissions. Zero noise complaints.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#c5ff00",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
+
