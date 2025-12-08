@@ -44,7 +44,7 @@ export function Hero() {
           {/* Navigation Buttons */}
           <nav className="flex items-center gap-3 sm:gap-4">
             <a 
-              href="https://terrasync.biz/products" 
+              href="https://www.terrasync.biz/shop" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white/80 hover:text-white border border-white/20 hover:border-white/40 rounded-full transition-all duration-300"
