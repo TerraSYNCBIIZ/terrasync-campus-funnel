@@ -473,6 +473,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="N8l-CLUZIrdPxOSicq6rTkEXbqtUFCJUEE_-FotUcTg" />
+        
         {/* Primary Schema - Organization */}
         <script
           type="application/ld+json"
