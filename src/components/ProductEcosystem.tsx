@@ -22,7 +22,7 @@ const mowers = [
   },
   {
     id: "ceora",
-    name: "Husqvarna CEORA",
+    name: "HUSQVARNA",
     tagline: "All-Weather Performance",
     image: "/images/ecosystem/ceora.jpg",
   },
