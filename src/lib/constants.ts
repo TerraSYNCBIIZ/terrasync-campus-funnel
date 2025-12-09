@@ -149,8 +149,8 @@ export const TESTIMONIALS = {
   quotes: [
     {
       quote: "", // Quote pending
-      name: "Coming Soon",
-      title: "To Be Revealed",
+      name: "[REDACTED]",
+      title: "",
       course: "Local Knoxville Golf Course",
       metric: "",
     },

@@ -39,20 +39,22 @@ export function Testimonials() {
                 <div className="flex items-start gap-4 pt-6 border-t border-white/10">
                   {/* Avatar placeholder */}
                   <div 
-                    className="w-12 h-12 rounded-full bg-terra-black-card flex items-center justify-center flex-shrink-0"
+                    className={`w-12 h-12 rounded-full bg-terra-black-card flex items-center justify-center flex-shrink-0 ${testimonial.name === '[REDACTED]' ? 'blur-sm' : ''}`}
                     style={{
-                      backgroundImage: `url('/images/testimonials/${testimonial.name.toLowerCase().replace(' ', '-')}.jpg')`,
+                      backgroundImage: testimonial.name !== '[REDACTED]' ? `url('/images/testimonials/${testimonial.name.toLowerCase().replace(' ', '-')}.jpg')` : undefined,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                     }}
                   >
                     <span className="text-terra-green text-lg font-bold">
-                      {testimonial.name.split(' ').map(n => n[0]).join('')}
+                      {testimonial.name === '[REDACTED]' ? '?' : testimonial.name.split(' ').map(n => n[0]).join('')}
                     </span>
                   </div>
                   
                   <div className="flex-grow">
-                    <p className="font-semibold text-white">{testimonial.name}</p>
+                    <p className={`font-semibold ${testimonial.name === '[REDACTED]' ? 'text-terra-gray blur-sm select-none' : 'text-white'}`}>
+                      {testimonial.name === '[REDACTED]' ? 'Name Withheld' : testimonial.name}
+                    </p>
                     {testimonial.title && (
                       <p className="text-sm text-terra-gray">{testimonial.title}</p>
                     )}
