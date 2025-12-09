@@ -6,8 +6,8 @@ export const BRAND = {
   tagline: "SUSTAINABLE. SILENT. AUTONOMOUS.",
   parent: "KnoxBots LLC",
   website: "https://terrasync.biz",
-  email: "info@terrasync.biz",
-  phone: "(239) 785-8023",
+  email: "wesleypitts@terrasync.biz",
+  phone: "(865) 888-0049",
 } as const;
 
 // Odoo Appointment Booking URL
