@@ -142,30 +142,30 @@ export const HOW_IT_WORKS = {
 export const TESTIMONIALS = {
   headline: "WHAT OUR CLIENTS ARE SAYING",
   stats: [
-    { value: "100+", label: "Properties" },
+    { value: "100+", label: "Clients" },
     { value: "150+", label: "Acres Managed" },
     { value: "98%", label: "Client Retention" },
   ],
   quotes: [
     {
       quote: "", // Quote pending
+      name: "Trey Parker",
+      title: "",
+      course: "Deadhorse",
+      metric: "",
+    },
+    {
+      quote: "", // Quote pending
+      name: "Clarke Burkle",
+      title: "",
+      course: "Different Strokes",
+      metric: "",
+    },
+    {
+      quote: "", // Quote pending
       name: "John Potter",
-      title: "Gardens Manager",
+      title: "",
       course: "University of Tennessee Gardens",
-      metric: "",
-    },
-    {
-      quote: "", // Quote pending
-      name: "UTRP Facilities Team",
-      title: "Facilities Management",
-      course: "UT Research Park",
-      metric: "",
-    },
-    {
-      quote: "", // Quote pending
-      name: "Pine School",
-      title: "Grounds Management",
-      course: "Pine School Athletics",
       metric: "",
     },
   ],
