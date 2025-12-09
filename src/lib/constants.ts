@@ -149,9 +149,9 @@ export const TESTIMONIALS = {
   quotes: [
     {
       quote: "", // Quote pending
-      name: "Trey Parker",
-      title: "",
-      course: "Deadhorse",
+      name: "Coming Soon",
+      title: "To Be Revealed",
+      course: "Local Knoxville Golf Course",
       metric: "",
     },
     {
