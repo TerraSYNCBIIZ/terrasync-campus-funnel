@@ -253,6 +253,16 @@ const serviceSchema = {
           "@type": "Service",
           name: "Autonomous Mowing",
           description: "24/7 silent robotic mowing with RTK-GPS precision. Zero emissions, zero noise complaints."
+        },
+        shippingDetails: {
+          "@type": "OfferShippingDetails",
+          shippingRate: { "@type": "MonetaryAmount", value: "0", currency: "USD" },
+          shippingDestination: { "@type": "DefinedRegion", addressCountry: "US" }
+        },
+        hasMerchantReturnPolicy: {
+          "@type": "MerchantReturnPolicy",
+          applicableCountry: "US",
+          returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted"
         }
       },
       {
@@ -261,6 +271,16 @@ const serviceSchema = {
           "@type": "Service",
           name: "Environmental Dashboard",
           description: "Real-time CO₂ savings tracking and stakeholder-ready sustainability reports for ESG compliance."
+        },
+        shippingDetails: {
+          "@type": "OfferShippingDetails",
+          shippingRate: { "@type": "MonetaryAmount", value: "0", currency: "USD" },
+          shippingDestination: { "@type": "DefinedRegion", addressCountry: "US" }
+        },
+        hasMerchantReturnPolicy: {
+          "@type": "MerchantReturnPolicy",
+          applicableCountry: "US",
+          returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted"
         }
       },
       {
@@ -269,6 +289,16 @@ const serviceSchema = {
           "@type": "Service",
           name: "Smart Irrigation Integration",
           description: "AI-optimized water management integrated with autonomous mowing schedule."
+        },
+        shippingDetails: {
+          "@type": "OfferShippingDetails",
+          shippingRate: { "@type": "MonetaryAmount", value: "0", currency: "USD" },
+          shippingDestination: { "@type": "DefinedRegion", addressCountry: "US" }
+        },
+        hasMerchantReturnPolicy: {
+          "@type": "MerchantReturnPolicy",
+          applicableCountry: "US",
+          returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted"
         }
       },
       {
@@ -277,6 +307,16 @@ const serviceSchema = {
           "@type": "Service",
           name: "Fleet Management Platform",
           description: "Unified command center for monitoring and controlling entire grounds operation."
+        },
+        shippingDetails: {
+          "@type": "OfferShippingDetails",
+          shippingRate: { "@type": "MonetaryAmount", value: "0", currency: "USD" },
+          shippingDestination: { "@type": "DefinedRegion", addressCountry: "US" }
+        },
+        hasMerchantReturnPolicy: {
+          "@type": "MerchantReturnPolicy",
+          applicableCountry: "US",
+          returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted"
         }
       }
     ]
@@ -415,14 +455,47 @@ const productSchema = {
     "@type": "Offer",
     price: "0",
     priceCurrency: "USD",
-    priceValidUntil: "2025-12-31",
+    priceValidUntil: "2026-12-31",
     availability: "https://schema.org/InStock",
     url: siteUrl,
     seller: {
       "@type": "Organization",
       name: "TerraSYNC™"
     },
-    description: "Contact for custom pricing - Zero upfront capital required"
+    description: "Contact for custom pricing - Zero upfront capital required",
+    shippingDetails: {
+      "@type": "OfferShippingDetails",
+      shippingRate: {
+        "@type": "MonetaryAmount",
+        value: "0",
+        currency: "USD"
+      },
+      shippingDestination: {
+        "@type": "DefinedRegion",
+        addressCountry: "US"
+      },
+      deliveryTime: {
+        "@type": "ShippingDeliveryTime",
+        handlingTime: {
+          "@type": "QuantitativeValue",
+          minValue: 7,
+          maxValue: 30,
+          unitCode: "DAY"
+        },
+        transitTime: {
+          "@type": "QuantitativeValue",
+          minValue: 1,
+          maxValue: 14,
+          unitCode: "DAY"
+        }
+      }
+    },
+    hasMerchantReturnPolicy: {
+      "@type": "MerchantReturnPolicy",
+      applicableCountry: "US",
+      returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+      merchantReturnLink: "https://terrasync.biz/terms"
+    }
   },
   aggregateRating: {
     "@type": "AggregateRating",
