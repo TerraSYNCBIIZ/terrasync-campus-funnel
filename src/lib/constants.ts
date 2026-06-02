@@ -7,7 +7,7 @@ export const BRAND = {
   parent: "KnoxBots LLC",
   website: "https://terrasync.biz",
   email: "wesleypitts@terrasync.biz",
-  phone: "(865) 888-0049",
+  phone: "(865) 236-2166",
 } as const;
 
 // Odoo Appointment Booking URL

@@ -181,7 +181,7 @@ const organizationSchema = {
     height: 48
   },
   image: `${siteUrl}/images/dashboard-preview.jpg`,
-  telephone: "+1-239-785-8023",
+  telephone: "+1-865-236-2166",
   email: "info@terrasync.biz",
   address: {
     "@type": "PostalAddress",
@@ -194,7 +194,7 @@ const organizationSchema = {
   contactPoint: [
     {
       "@type": "ContactPoint",
-      telephone: "+1-239-785-8023",
+      telephone: "+1-865-236-2166",
       contactType: "sales",
       email: "info@terrasync.biz",
       areaServed: "US",
@@ -391,7 +391,7 @@ const localBusinessSchema = {
   "@id": "https://terrasync.biz/#localbusiness",
   name: "TerraSYNC™",
   image: `${siteUrl}/images/dashboard-preview.jpg`,
-  telephone: "+1-239-785-8023",
+  telephone: "+1-865-236-2166",
   email: "info@terrasync.biz",
   priceRange: "$$$$",
   description: "Commercial autonomous mowing and grounds management services for universities, municipalities, corporate campuses, and commercial properties.",
